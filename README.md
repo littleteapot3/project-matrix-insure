@@ -1,4 +1,4 @@
-# project-MatrixInsure
+# Project: MatrixInsure
 A linear algebra project for insurance analytics. 
 
 ## 📌 Overview  
@@ -27,13 +27,39 @@ The dataset (`insurance_us.csv`) contains:
 
 ### 🔍 Step 1: Exploratory Data Analysis (EDA)  
 - Clean the data and check for missing values.  
-- Visualize patterns and relationships in the data.  
+- Creates data visualizations for key patterns with histograms, boxplots, and scatterplots.
+- Examines relationships between features using a correlation matrix heatmap.
+- Analyzes outliers in income and family members.
+
+![image](https://github.com/user-attachments/assets/21dfa5c2-423d-4b44-afc2-e048f3a1656d)
+
 
 ### 🤖 Step 2: Build Machine Learning Models  
-- **Find similar customers** using k-Nearest Neighbors (kNN).  
-- **Predict benefit eligibility** with logistic regression.  
-- **Estimate the number of benefits** using linear regression.  
-- **Protect customer data** by applying data masking and ensuring models still work.  
+**Finding Similar Customers with k-Nearest Neighbors (kNN)**
+We explored different ways to group similar customers based on their characteristics:
+
+- Tried different feature combinations—comparing age & gender vs. income & family size.
+- Tested Euclidean vs. Manhattan distances to see how similarity is measured.
+- Looked at how scaling (MaxAbsScaler) changes the closest matches—turns out, scaling can totally reshuffle the ranking of nearest neighbors!
+
+      <img width="553" alt="image" src="https://github.com/user-attachments/assets/61a3b5e3-c04a-4187-b2df-d9f16b8ee437" />
+
+
+   
+**Predicting Benefit Eligibility with Regression**
+We built a linear regression model to estimate how many benefits a customer might receive.
+
+- Next, we’ll improve accuracy by testing Ridge and Lasso regression to prevent overfitting.
+- There is also a plan to visualize these predictions using scatterplots with regression lines to make the patterns clearer.
+
+
+
+**Privacy Protection for Customer Data**
+To ensure customer information stays secure, we experimented with data obfuscation techniques.
+
+- The goal was to protect privacy while making sure our models still work accurately.
+- We found that even after masking sensitive data, predictions remained reliable—a great result!
+
 
 ## 📈 Key Takeaways  
 
@@ -44,10 +70,7 @@ The dataset (`insurance_us.csv`) contains:
 
 ## 🔦 Future Improvements
 
-- Improve EDA with additional visualizations (e.g., correlation heatmaps).
-- Optimize feature selection for similarity analysis.
-- Explore alternative regression techniques (e.g., Ridge, Lasso).
-- Extend data obfuscation methods and assess real-world implications.
+- Exploring alternative regression techniques (e.g., Ridge, Lasso).
 
 ## How to Run  
 
